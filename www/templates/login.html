@@ -1,0 +1,32 @@
+<ion-view>
+  <ion-content class="padding">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">Login</h1>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <i class="icon ion-at placeholder-icon"></i>
+            <input type="text" placeholder="Email" ng-model="user.email">
+          </label> <br>
+          <label class="item item-input">
+            <i class="icon ion-locked placeholder-icon"></i>
+            <input type="password" placeholder="Contraseña" ng-model="user.password" ng-keydown="loginT($event, user)">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-outline button-calm" ng-click="login(user)">
+          Iniciar Sesíon
+        </button>
+      </div>
+      O
+      <div class="col">
+        <button class="button button-block button-outline button-dark" ng-click="goregister()">
+          Registrarse
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
