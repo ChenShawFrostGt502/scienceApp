@@ -1,28 +1,34 @@
 <ion-view>
-  <ion-content class="padding">
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center">Registro</h1>
+  <ion-content class="padding my-viewss">
+    <div class="row responsive-sm">
+      <div class="col email-col">
+        <h1 class="text-center title-color">Registro</h1>
         <div class="list list-inset">
-          <label class="item item-input">
+          <label class="item item-input bg-t">
             <i class="icon ion-at placeholder-icon"></i>
-            <input type="text" placeholder="Email" ng-model="user.email">
-          </label> <br>
-          <label class="item item-input">
-            <i class="icon ion-locked placeholder-icon"></i>
-            <input type="password" placeholder="Contraseña" ng-model="user.password" ng-keydown="registerT($event, user)">
+            <input type="text" placeholder="Email" ng-model="user.email" class="ipt">
           </label>
         </div>
       </div>
+      <div class="col pass-col">
+        <div class="list list-inset">
+          <label class="item item-input bg-t">
+            <i class="icon ion-locked placeholder-icon"></i>
+            <input type="password" placeholder="Contraseña" ng-model="user.password" ng-keydown="registerT($event, user)" class="ipt">
+            </label>
+          </div>
+      </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col col-45">
         <button class="button button-block button-outline button-calm" ng-click="register(user)">
           Registrarse
         </button>
       </div>
-      O
-      <div class="col">
+      <div class="col col-10">
+        <h1 class="padding-top">O</h1>
+      </div>
+      <div class="col col-45">
         <button class="button button-block button-outline button-dark" ng-click="gologin()">
           Iniciar Sesión
         </button>
