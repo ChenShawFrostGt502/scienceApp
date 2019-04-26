@@ -54,7 +54,6 @@ angular.module('starter.controllers', [])
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      alert(error.message);
       // ...
     });
   };
@@ -110,7 +109,9 @@ angular.module('starter.controllers', [])
       var errorCode = error.code;
       var errorMessage = error.message;
       // ...
-      alert(error.message);
+      if (errorMessage == "The password is invalid or the user does not have a password.") {
+        alert("El usuario o contraseña son incorrectos.");  
+      };
     });
   };
 
@@ -132,7 +133,9 @@ angular.module('starter.controllers', [])
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
-        alert(error.message)
+        if (errorMessage == "The password is invalid or the user does not have a password.") {
+          alert("El usuario o contraseña son incorrectos.");  
+        };
       });
     };
   };
