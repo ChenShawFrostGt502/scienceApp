@@ -64,3 +64,11 @@ canvas {
 .white-text {
   color: #ffffff;
 }
+
+.titulo{
+  font-size: 15px;
+}
+
+.t-view{
+  background: url("../img/fondo: 1.png;");
+}

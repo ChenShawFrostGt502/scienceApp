@@ -256,16 +256,12 @@ angular.module('starter.controllers', [])
 
 // Controller for state tNutri
 .controller('tnutriCtrl', function($scope) {
-  alert("Good job!")
-
 })
 
 // Controller for state  infoG
 .controller('infogCtrl', function($scope) {
-  alert("Good job")
 })
 
 // Controller for state juego
 .controller('juegoCtrl', function($scope) {
-  alert("Good job")
 })
