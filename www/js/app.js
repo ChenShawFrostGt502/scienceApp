@@ -58,8 +58,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/videoi.html',
     controller: 'VideoCtrl'
   })
+  .state('tNutri', {
+    url: '/tNutri',
+    templateUrl: '../templates/tnutri.html',
+    controller: 'tnutriCtrl'
+  })
+  .state('infoG', {
+    url: '/infoG',
+    templateUrl: '../templates/infog.html',
+    controller: 'infogCtrl'
+  })
+  .state('juego', {
+    url: '/juego',
+    templateUrl: '../templates/juego.html',
+    controller: 'juegoCtrl'
+  })
     
-
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 });

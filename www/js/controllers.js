@@ -28,12 +28,6 @@
 
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $state) {
-  $scope.width = function() {
-    $state.go('register')
-  }
-})
-
 // Controller for state Registro
 .controller('RegisterCtrl', function($scope, $state) {
  // Function in a button for user registration
@@ -151,17 +145,26 @@ angular.module('starter.controllers', [])
 .controller('homeCtrl', function($scope, $state){
   $scope.DNA = function() {
     $state.go('DNA');
-  }
+  };
   $scope.Videoi = function() {
-    $state.go('videoi')
-  }
+    $state.go('videoi');
+  };
+  $scope.Tabla = function() {
+    $state.go('tNutri');
+  };
+  $scope.info = function() {
+    $state.go('infoG')
+  };
+  $scope.juego = function() {
+    $state.go('juego')
+  };
 })
 
 .controller('DNACtrl', function($scope) {
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.height = 480;
   const { width, height } = canvas;
   const xCenter = width / 2; // centre de l'écran en x
   const yStart = 50; // positionde la première hélice en y
@@ -247,5 +250,22 @@ angular.module('starter.controllers', [])
     render();
 })
 
+// Controller for state videoi
 .controller('VideoCtrl', function($scope) {
+})
+
+// Controller for state tNutri
+.controller('tnutriCtrl', function($scope) {
+  alert("Good job!")
+
+})
+
+// Controller for state  infoG
+.controller('infogCtrl', function($scope) {
+  alert("Good job")
+})
+
+// Controller for state juego
+.controller('juegoCtrl', function($scope) {
+  alert("Good job")
 })
