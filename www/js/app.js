@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
   .state('tNutri', {
     url: '/tNutri',
-    templateUrl: '../templates/tnutri.html',
+    templateUrl: '../templates/tablaNutri.html',
     controller: 'tnutriCtrl'
   })
   .state('infoG', {
@@ -73,7 +73,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: '../templates/juego.html',
     controller: 'juegoCtrl'
   })
-    
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 });

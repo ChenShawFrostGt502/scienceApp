@@ -1,0 +1,37 @@
+<ion-view view-title="Tabla nutricional">
+	<ion-content class="t-view">
+		<div class="row">
+			<div class="col col-50">
+				<div class="list">
+					<div class="item item-divider">
+						INF.NUTRICIONAL
+					</div>
+					<a href="" class="item" ng-repeat="x in infoNutri | filter: alm as results track by $index">
+						{{ x }}
+					</a>
+				</div>
+			</div>
+			<div class="col col-25">
+				<div class="list">
+					<div class="item item-divider">
+						SER
+						Calci + Uva-Pera
+					</div>
+					<a href="" class="item" ng-repeat="y in sreCal | filter:alm as results track by $index">
+						{{ y }}
+					</a>
+				</div>
+			</div>
+			<div class="col col-25">
+				<div class="list">
+					<div class="item item-divider">
+						%VD (1)
+					</div>
+					<a href="" class="item" ng-repeat="z in VD | filter: alm as results track by $index">
+						{{ z }}
+					</a>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

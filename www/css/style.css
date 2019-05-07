@@ -5,6 +5,10 @@
   background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
 } */
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .my-view {
   background: black;
 }
@@ -70,7 +74,7 @@ canvas {
 }
 
 .t-view{
-  background: url("../img/fondo: 1.png;");
+  background: url("../img/fondo1.png;");
 }
 
 
@@ -189,4 +193,40 @@ canvas {
 
 .col-game {
   padding-top: 42px;
+}
+
+
+.info-bg {
+  background: url('../img/infografia.png')no-repeat center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+  width: 408px;
+  height: 521px;
+}
+
+.info-view {
+  background-color: #096386;
+}
+
+.title-info {
+  color: #fff;
+}
+
+video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: relative;
+top: 0;
+left: 0;
+width: 100%;
+height: 350px;
 }

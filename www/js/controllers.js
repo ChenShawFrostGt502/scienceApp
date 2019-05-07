@@ -192,6 +192,9 @@ angular.module('starter.controllers', [])
   $scope.juego = function() {
     $state.go('juego');
   };
+  $scope.Tablas = function() {
+    $state.go('tablaprueba');
+  }
 })
 
 .controller('DNACtrl', function($scope) {
@@ -290,6 +293,10 @@ angular.module('starter.controllers', [])
 
 // Controller for state tNutri
 .controller('tnutriCtrl', function($scope) {
+  // Arrays for table nutritional
+  $scope.infoNutri = ['Valor energetico', 'Carbohidratos', 'Proteinas', 'Grasas totales', 'Grasas saturadas', 'Grasas trans', 'Grasas monoinsaturadas', 'Grasas poliinsaturadas', 'Colesterol', 'Sodio', 'Vitamina A', 'Vitamina D', 'Vitamina E', 'Vitamina B2', 'Acido folico', 'Vitamina B12', 'Calcio', 'Fosforo'];
+  $scope.sreCal = ['59Kcal = 248kJ', '10g', '4,7g', '0g', '0g', '0g', '0g', '0g', '0g', '76mg', '127mcg', '1mcg', '2mg', '0,22mg', '48mcg', '0,49mcg', '521mg', '126mg'];
+  $scope.VD = [3,3,6,0,0,'---','---','---','---',3,21,20,20,17,20,20,52,18];
 })
 
 // Controller for state  infoG
@@ -303,7 +310,8 @@ angular.module('starter.controllers', [])
     alert($scope.medida);
   };*/
   /*var symbols = ['bicycle', 'bicycle', 'leaf', 'leaf', 'cube', 'cube', 'anchor', 'anchor', 'paper-plane-o', 'paper-plane-o', 'bolt', 'bolt', 'bomb', 'bomb', 'diamond', 'diamond'],*/  
-  var palabras = ['Vit A', 'Vit A', 'Vit B1', 'Vit B1', 'Vit C', 'Vit C', 'Vit D', 'Vit D', 'Vit B2', 'Vit B2', 'Vit E', 'Vit E', 'Vit B12', 'Vit B12', 'Vit K1', 'Vit K1'],
+    // $scope.palabras = ['Vit A', 'Vit A', 'Vit B1', 'Vit B1', 'Vit C', 'Vit C', 'Vit D', 'Vit D', 'Vit B2', 'Vit B2', 'Vit E', 'Vit E', 'Vit B12', 'Vit B12', 'Vit K1', 'Vit K1'],
+    var palabras = ['img/platanos.jpg', 'img/platanos.jpg', 'img/naranja.jpg', 'img/naranja.jpg', 'img/pollo.jpg', 'img/pollo.jpg', 'img/aguacate.jpg', 'img/aguacate.jpg', 'img/nueces.jpg', 'img/nueces.jpg', 'img/huevos.jpg', 'img/huevos.jpg', 'img/legumbres.jpg','img/legumbres.jpg', 'img/pescado.jpg','img/pescado.jpg'],
     opened = [],
     match = 0,
     moves = 0,
@@ -343,7 +351,8 @@ function initGame() {
   $ratingStars.removeClass('fa-star-o').addClass('fa-star');
   for (var i = 0; i < cards.length; i++) {
     // $deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'))
-    $deck.append($('<li class="card">' + cards[i] + '</li>'))
+    // $deck.append($('<li class="card">' + cards[i] + '</li>'))
+    $deck.append($('<li class="card"><img src="' + cards[i] + '"></img></li>'))
   }
 };
 
@@ -445,3 +454,5 @@ $deck.on('click', '.card:not(".match, .open")', function() {
 
 initGame();
 });
+
+
